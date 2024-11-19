@@ -1,0 +1,22 @@
+server:
+  port: 9001
+  
+spring:
+  application:
+    name: USER-MODULE
+  datasource:
+    url: jdbc:mysql://localhost:3306/usermodule
+    username: root
+    password: Badri@2001
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+    fetch-registry: true
+    register-with-eureka: true
